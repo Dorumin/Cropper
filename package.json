@@ -1,0 +1,20 @@
+{
+  "name": "cropper",
+  "version": "0.0.1",
+  "description": "Simple command line batch image cropper",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "png",
+    "crop",
+    "images"
+  ],
+  "author": "Doru",
+  "license": "ISC",
+  "dependencies": {
+    "jimp": "0.9.3",
+    "yargs": "15.1.0"
+  }
+}
