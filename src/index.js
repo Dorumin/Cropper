@@ -10,12 +10,11 @@ const makedir = util.promisify(fs.mkdir);
 class Cropper {
     constructor() {
         this.args = yargs
-            .wrap(yargs.terminalWidth())
+            .wrap(Math.min(120, yargs.terminalWidth()))
             .scriptName('cropper')
             .example('$0 --concurrent 2 --height 50 --width 50', 'Crop a 50 pixel square from the top left of the image')
             .example('$0 --left 10 --top 10 --right 10 --bottom 10', 'Crop out a 10 pixel border from around the image')
             .option('concurrent', {
-                alias: 'c',
                 type: 'number',
                 desc: 'Images to process at any given time',
                 default: 8
@@ -41,25 +40,25 @@ class Cropper {
             .option('left', {
                 alias: 'l',
                 type: 'number',
-                desc: 'Distance from the left of the image to crop',
+                desc: 'Pixels from the left',
                 default: 0
             })
             .option('top', {
                 alias: 't',
                 type: 'number',
-                desc: 'Distance from the top of the image to crop',
+                desc: 'Pixels from the top',
                 default: 0
             })
             .option('right', {
                 alias: 'r',
                 type: 'number',
-                desc: 'Distance from the right of the image to crop, can be negative, you may want to use `width`',
+                desc: 'Pixels from the right, can be negative, conflicts with `width`',
                 conflicts: 'width'
             })
             .option('bottom', {
                 alias: 'b',
                 type: 'number',
-                desc: 'Distance from the bottom of the image to crop, can be negative, you may want to use `height`',
+                desc: 'Pixels from the bottom, can be negative, conflicts with `height`',
                 conflicts: 'height'
             })
             .option('height', {
