@@ -10,7 +10,7 @@ const makedir = util.promisify(fs.mkdir);
 class Cropper {
     constructor() {
         this.args = yargs
-            .wrap(Math.min(120, yargs.terminalWidth()))
+            .wrap(Math.min(110, yargs.terminalWidth()))
             .scriptName('cropper')
             .example('$0 --concurrent 2 --height 50 --width 50', 'Crop a 50 pixel square from the top left of the image')
             .example('$0 --left 10 --top 10 --right 10 --bottom 10', 'Crop out a 10 pixel border from around the image')

@@ -12,17 +12,17 @@ npm start -- --help
 Current help text:
 ```bash
 Options:
-  --help        Show help                                                                                      [boolean]
-  --version     Show version number                                                                            [boolean]
-  --concurrent  Images to process at any given time                                                [number] [default: 8]
-  --input       The directory to fetch images from, relative or absolute                     [string] [default: "files"]
-  --output      The directory to spit cropped images to, relative or absolute               [string] [default: "output"]
-  --left, -l    Pixels from the left                                                               [number] [default: 0]
-  --top, -t     Pixels from the top                                                                [number] [default: 0]
-  --right, -r   Pixels from the right, can be negative, conflicts with `width`                                  [number]
-  --bottom, -b  Pixels from the bottom, can be negative, conflicts with `height`                                [number]
-  --height, -h  Cropped image height, starting from the provided `top`                                          [number]
-  --width, -w   Cropped image width, starting from the provided `left`                                          [number]
+  --help        Show help                                                                            [boolean]
+  --version     Show version number                                                                  [boolean]
+  --concurrent  Images to process at any given time                                      [number] [default: 8]
+  --input       The directory to fetch images from, relative or absolute           [string] [default: "files"]
+  --output      The directory to spit cropped images to, relative or absolute     [string] [default: "output"]
+  --left, -l    Pixels from the left                                                     [number] [default: 0]
+  --top, -t     Pixels from the top                                                      [number] [default: 0]
+  --right, -r   Pixels from the right, can be negative, conflicts with `width`                        [number]
+  --bottom, -b  Pixels from the bottom, can be negative, conflicts with `height`                      [number]
+  --height, -h  Cropped image height, starting from the provided `top`                                [number]
+  --width, -w   Cropped image width, starting from the provided `left`                                [number]
 
 Examples:
   cropper --concurrent 2 --height 50 --width 50      Crop a 50 pixel square from the top left of the image
