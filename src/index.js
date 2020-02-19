@@ -52,13 +52,13 @@ class Cropper {
             .option('right', {
                 alias: 'r',
                 type: 'number',
-                desc: 'Pixels from the right, can be negative, conflicts with `width`',
+                desc: 'Pixels from the right, conflicts with `width`',
                 conflicts: 'width'
             })
             .option('bottom', {
                 alias: 'b',
                 type: 'number',
-                desc: 'Pixels from the bottom, can be negative, conflicts with `height`',
+                desc: 'Pixels from the bottom, conflicts with `height`',
                 conflicts: 'height'
             })
             .option('height', {

@@ -19,8 +19,8 @@ Options:
   --output      The directory to spit cropped images to, relative or absolute     [string] [default: "output"]
   --left, -l    Pixels from the left                                                     [number] [default: 0]
   --top, -t     Pixels from the top                                                      [number] [default: 0]
-  --right, -r   Pixels from the right, can be negative, conflicts with `width`                        [number]
-  --bottom, -b  Pixels from the bottom, can be negative, conflicts with `height`                      [number]
+  --right, -r   Pixels from the right, conflicts with `width`                                         [number]
+  --bottom, -b  Pixels from the bottom, conflicts with `height`                                       [number]
   --height, -h  Cropped image height, starting from the provided `top`                                [number]
   --width, -w   Cropped image width, starting from the provided `left`                                [number]
 
